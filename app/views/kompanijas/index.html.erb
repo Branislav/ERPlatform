@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BazaKompanija</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= form_tag kompanijas_path, :method => 'get' do %>
+    <div>
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search", :pib => nil %>
+
+    </div>
+<%end%>
+
+<div id="container">
+<h1>Listing companies</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Pib</th>
+    <th>Adress</th>
+    <th>Lc</th>
+    <th>Datebegin</th>
+    <th>Dateend</th>
+    <th>Comment</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @kompanijas.each do |kompanija| %>
+  <tr>
+    <td><%= kompanija.name %></td>
+    <td><%= kompanija.pib %></td>
+    <td><%= kompanija.address %></td>
+    <td><%= kompanija.lc %></td>
+    <td><%= kompanija.dateBegin %></td>
+    <td><%= kompanija.dateEnd %></td>
+    <td><%= kompanija.comment %></td>
+    <td><%= link_to 'Show', kompanija %></td>
+    <td><%= link_to 'Edit', edit_kompanija_path(kompanija) %></td>
+    <td><%= link_to 'Destroy', kompanija, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Kompanija', new_kompanija_path %>
+</div>
+<%= image_tag  "AIESEC_logo.jpg", :class => "style_image" %>
+</body>

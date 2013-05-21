@@ -1,0 +1,49 @@
+<div id="container">
+<%= form_for(@kompanija) do |f| %>
+  <% if @kompanija.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@kompanija.errors.count, "error") %> prohibited this company from being saved:</h2>
+
+      <ul>
+      <% @kompanija.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :pib %><br />
+    <%= f.text_field :pib %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_area :address %>
+  </div>
+  <div class="field">
+    <%= f.label :lc %><br />
+    <%= f.text_field :lc %>
+  </div>
+  <div class="field">
+    <%= f.label :dateBegin %><br />
+    <%= f.datetime_select :dateBegin %>
+  </div>
+  <div class="field">
+    <%= f.label :dateEnd %><br />
+    <%= f.datetime_select :dateEnd %>
+  </div>
+  <div class="field">
+    <%= f.label :comment %><br />
+    <%= f.text_area :comment %>
+  </div>
+  <div class="actions">
+    <%= f.submit%>
+
+  </div>
+<% end %>
+    </div>
+

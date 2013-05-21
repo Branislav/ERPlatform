@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  pib: MyString
+  adress: MyText
+  lc: MyString
+  dateBegin: 2013-05-08 16:48:44
+  dateEnd: 2013-05-08 16:48:44
+  comment: MyText
+
+two:
+  name: MyString
+  pib: MyString
+  adress: MyText
+  lc: MyString
+  dateBegin: 2013-05-08 16:48:44
+  dateEnd: 2013-05-08 16:48:44
+  comment: MyText

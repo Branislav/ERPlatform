@@ -1,0 +1,43 @@
+<div id="container">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @kompanija.name %>
+</p>
+
+<p>
+  <b>Pib:</b>
+  <%= @kompanija.pib %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @kompanija.address %>
+</p>
+
+<p>
+  <b>Lc:</b>
+  <%= @kompanija.lc %>
+</p>
+
+<p>
+  <b>Datebegin:</b>
+  <%= @kompanija.dateBegin %>
+</p>
+
+<p>
+  <b>Dateend:</b>
+  <%= @kompanija.dateEnd %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @kompanija.comment %>
+</p>
+
+
+<%= link_to 'Edit', edit_kompanija_path(@kompanija) %> |
+<%= link_to 'Back', kompanijas_path %>
+ </div>
+<%= image_tag  "AIESEC_logo.jpg", :class => "style_image" %>
